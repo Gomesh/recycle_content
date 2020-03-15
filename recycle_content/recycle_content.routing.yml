@@ -1,0 +1,39 @@
+recycle_content.default:
+  path: '/admin/recycle_content'
+  defaults:
+    _controller: '\Drupal\recycle_content\Controller\RecycleController::summary'
+    _title: 'Recycle'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'access unpublished content'
+
+recycle_content.entity_list:
+  path: '/admin/recycle_content/{entity_type_id}'
+  defaults:
+    _controller: '\Drupal\recycle_content\Controller\RecycleController::entityList'
+    _title_callback: '\Drupal\recycle_content\Controller\RecycleController::getTitle'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'access unpublished content'
+
+restore.form:
+  path: '/admin/recycle_content/{entity_type_id}/restore/{entity_id}'
+  defaults:
+    _title: 'Purge'
+    _form: '\Drupal\recycle_content\Form\RestoreForm'
+  requirements:
+    _permission: 'access unpublished content'
+  options:
+    _admin_route: TRUE
+
+purge.form:
+  path: '/admin/recycle_content/{entity_type_id}/purge/{entity_id}'
+  defaults:
+    _title: 'Purge'
+    _form: '\Drupal\recycle_content\Form\PurgeForm'
+  requirements:
+    _permission: 'access unpublished content'
+  options:
+    _admin_route: TRUE

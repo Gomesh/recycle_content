@@ -1,0 +1,8 @@
+recycle_content.default:
+  title: Recycle Content
+  route_name: recycle_content.default
+  base_route: system.admin_content
+  weight: 100
+recycle_content.local_tasks:
+  deriver: 'Drupal\recycle_content\Plugin\Derivative\RecycleLocalTasks'
+  weight: 100

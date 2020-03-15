@@ -1,0 +1,6 @@
+{
+    "name": "drupal/recycle_content",
+    "description": "Displays content and allows them to be restored.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}
